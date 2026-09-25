@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre nós❤️</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff5f7;
+            color: #4a1f2b;
+            overflow-x: hidden;
+        }
+
+        /* ==============================
+           CORAÇÕES
+        ============================== */
+
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 20px;
+            animation: subir 8s linear forwards;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.8;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+
+        /* ==============================
+           TELA INICIAL
+        ============================== */
+
+        .inicio {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 650px;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #000;
+        }
+
+        .inicio img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+            filter: brightness(0.65);
+        }
+
+        .inicio::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0.15),
+                    rgba(0,0,0,0.55)
+                );
+        }
+
+        .inicio-conteudo {
+            position: relative;
+            z-index: 2;
+
+            width: 90%;
+            max-width: 900px;
+
+            text-align: center;
+            color: white;
+
+            padding: 30px;
+        }
+
+        .inicio-conteudo .pequeno {
+            font-size: 18px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .inicio-conteudo h1 {
+            font-size: clamp(42px, 7vw, 85px);
+            line-height: 1;
+            margin-bottom: 25px;
+
+            text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .inicio-conteudo p {
+            font-size: clamp(18px, 2.5vw, 25px);
+            line-height: 1.6;
+
+            max-width: 700px;
+            margin: 0 auto 35px;
+        }
+
+        .botao-inicio {
+            display: inline-block;
+
+            padding: 15px 35px;
+
+            border-radius: 50px;
+
+            background: #ffffff;
+            color: #a52d50;
+
+            text-decoration: none;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .botao-inicio:hover {
+            transform: translateY(-4px);
+            background: #ffe5ec;
+        }
+
+
+        /* ==============================
+           INTRODUÇÃO
+        ============================== */
+
+        .introducao {
+            padding: 90px 20px 70px;
+            text-align: center;
+            background: #fff5f7;
+        }
+
+        .introducao .container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .introducao h2 {
+            font-size: 40px;
+            margin-bottom: 25px;
+            color: #a52d50;
+        }
+
+        .introducao p {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #63333f;
+        }
+
+
+        /* ==============================
+           CONTADOR
+        ============================== */
+
+        .contador {
+            padding: 70px 20px;
+            background: #a52d50;
+            color: white;
+            text-align: center;
+        }
+
+        .contador h2 {
+            font-size: 35px;
+            margin-bottom: 35px;
+        }
+
+        .contador-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tempo {
+            width: 120px;
+            padding: 20px 10px;
+
+            background: rgba(255,255,255,0.15);
+            border-radius: 15px;
+
+            backdrop-filter: blur(5px);
+        }
+
+        .tempo span {
+            display: block;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .tempo small {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+
+        /* ==============================
+           LINHA DO TEMPO
+        ============================== */
+
+        .timeline-section {
+            padding: 100px 20px;
+            background: #fff;
+        }
+
+        .titulo-secao {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .titulo-secao h2 {
+            font-size: 42px;
+            color: #a52d50;
+            margin-bottom: 15px;
+        }
+
+        .titulo-secao p {
+            color: #777;
+            font-size: 18px;
+        }
+
+        .timeline {
+            max-width: 1100px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+
+            width: 3px;
+            background: #e7a1b3;
+
+            top: 0;
+            bottom: 0;
+
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            margin-bottom: 50px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline-item::before {
+            content: "❤️";
+
+            position: absolute;
+            top: 30px;
+
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+            border-radius: 50%;
+
+            z-index: 3;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -20px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -20px;
+        }
+
+        .ano {
+            display: inline-block;
+
+            padding: 8px 20px;
+
+            border-radius: 30px;
+
+            background: #a52d50;
+            color: white;
+
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .timeline-card {
+            background: #fff5f7;
+            padding: 20px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(90,30,45,0.1);
+        }
+
+        .timeline-card h3 {
+            color: #a52d50;
+            margin-bottom: 12px;
+            font-size: 25px;
+        }
+
+        .timeline-card p {
+            line-height: 1.7;
+            color: #63333f;
+            margin-bottom: 20px;
+        }
+
+
+        /* ==============================
+           FOTOS DA LINHA DO TEMPO
+        ============================== */
+
+        .fotos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .fotos img {
+            width: 100%;
+            height: 220px;
+
+            object-fit: cover;
+
+            border-radius: 14px;
+
+            transition: 0.4s;
+        }
+
+        .fotos img:hover {
+            transform: scale(1.04);
+        }
+
+
+        /* ==============================
+           CARTA
+        ============================== */
+
+        .carta-section {
+            padding: 100px 20px;
+            background: #fff5f7;
+        }
+
+        .carta {
+            max-width: 850px;
+            margin: auto;
+
+            background: white;
+
+            padding: 55px 45px;
+
+            border-radius: 25px;
+
+            box-shadow: 0 15px 40px rgba(90,30,45,0.12);
+
+            text-align: center;
+        }
+
+        .carta h2 {
+            color: #a52d50;
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+
+        .carta p {
+            font-size: 18px;
+            line-height: 2;
+            color: #63333f;
+        }
+
+
+        /* ==============================
+           FINAL
+        ============================== */
+
+        .final {
+            min-height: 60vh;
+
+            padding: 100px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(90,20,40,0.85),
+                    rgba(90,20,40,0.85)
+                );
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        .final-conteudo {
+            max-width: 800px;
+        }
+
+        .final h2 {
+            font-size: clamp(38px, 6vw, 70px);
+            margin-bottom: 25px;
+        }
+
+        .final p {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .final .coracao-final {
+            font-size: 60px;
+            margin-top: 30px;
+        }
+
+
+        /* ==============================
+           RODAPÉ
+        ============================== */
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #32121d;
+            color: #f9dce4;
+        }
+
+
+        /* ==============================
+           RESPONSIVO
+        ============================== */
+
+        @media (max-width: 768px) {
+
+            .inicio {
+                min-height: 600px;
+            }
+
+            .inicio-conteudo {
+                padding: 20px;
+            }
+
+            .inicio-conteudo .pequeno {
+                font-size: 13px;
+                letter-spacing: 2px;
+            }
+
+            .inicio-conteudo p {
+                font-size: 17px;
+            }
+
+            .contador-box {
+                gap: 10px;
+            }
+
+            .tempo {
+                width: 90px;
+                padding: 15px 5px;
+            }
+
+            .tempo span {
+                font-size: 28px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                width: 100%;
+                left: 0;
+                text-align: left;
+
+                padding-left: 55px;
+                padding-right: 5px;
+            }
+
+            .timeline-item::before,
+            .timeline-item:nth-child(odd)::before,
+            .timeline-item:nth-child(even)::before {
+                left: 0;
+                right: auto;
+            }
+
+            .fotos {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .fotos img {
+                height: 170px;
+            }
+
+            .carta {
+                padding: 35px 22px;
+            }
+
+            .carta h2 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =====================================
+         TELA INICIAL
+    ====================================== -->
+
+    <section class="inicio">
+
+        <!--
+            COLOQUE A FOTO PRINCIPAL AQUI.
+
+            Exemplo:
+            imagens/foto-inicial.jpg
+
+            Se sua foto estiver em outra pasta,
+            altere somente o caminho abaixo.
+        -->
+
+        <img
+            src="foto/foto-05.JPEG"
+            alt="Nossa foto"
+        >
+
+        <div class="inicio-conteudo">
+
+            <div class="pequeno">
+                Uma história que começou com você
+            </div>
+
+            <h1>
+                Seja bem-vinda a nossa linha do tempo!
+            </h1>
+
+            <p>
+                Cada momento ao seu lado se tornou uma lembrança
+                que eu quero guardar para sempre.
+            </p>
+
+            <a href="#historia" class="botao-inicio">
+                Conheça nossa história
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         INTRODUÇÃO
+    ====================================== -->
+
+    <section class="introducao" id="historia">
+
+        <div class="container">
+
+            <h2>
+                Nossa história
+            </h2>
+
+            <p>
+                Algumas histórias começam sem que a
+             gente perceba o quanto elas vão mudar
+                nossas vidas.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CONTADOR
+    ====================================== -->
+
+    <section class="contador">
+
+        <h2>
+            Já vivemos...
+        </h2>
+
+        <div class="contador-box">
+
+            <div class="tempo">
+                <span id="anos">0</span>
+                <small>Anos</small>
+            </div>
+
+            <div class="tempo">
+                <span id="meses">0</span>
+                <small>Meses</small>
+            </div>
+
+            <div class="tempo">
+                <span id="dias">0</span>
+                <small>Dias</small>
+            </div>
+
+            <div class="tempo">
+                <span id="horas">0</span>
+                <small>Horas</small>
+            </div>
+
+            <div class="tempo">
+                <span id="minutos">0</span>
+                <small>Minutos</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         LINHA DO TEMPO
+    ====================================== -->
+
+    <section class="timeline-section">
+
+        <div class="titulo-secao">
+
+            <h2>
+                Nossa linha do tempo
+            </h2>
+
+            <p>
+                Alguns dos momentos que fizeram nossa história.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <!-- =================================
+                 PRIMEIRO ANO
+            ================================== -->
+
+            <div class="timeline-item">
+
+                <span class="ano">
+                    1º Ano
+                </span>
+
+                <div class="timeline-card">
+
+                    <h3>
+                        Onde tudo começou ❤️
+                    </h3>
+
+                    <p>
+                        Desde o primeiro momento, cada instante
+                        ao seu lado se tornou especial, eu jamais iria imaginar 
+                        que uma simples ida ao cinema com um intuito nada romântico
+                        marcaria o inicio de uma história cheia de amor.
+                    </p>
+
+                    <div class="fotos">
+
+                        <img
+                            src="foto/foto-01.JPEG"
+                            alt="Foto do primeiro ano"
+                        >
+
+                        <img
+                            src="foto/foto-02.JPEG"
+                            alt="Foto do primeiro ano"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 SEGUNDO ANO
+            ================================== -->
+
+            <div class="timeline-item">
+
+                <span class="ano">
+                    2º Ano
+                </span>
+
+                <div class="timeline-card">
+
+                    <h3>
+                        Mais momentos, mais histórias ❤️
+                    </h3>
+
+                    <p>
+                        Durante esse tempo eu já sabia que você 
+                        era a mulher da minha vida, você faz tudo ser leve, 
+                        se eu puder ter outra vida com certeza eu estaria
+                         te amando também. Você é incrível minha princesa!!!!
+                    </p>
+
+                    <div class="fotos">
+
+                        <img
+                            src="foto/foto-03.JPEG"
+                            alt="Foto do segundo ano"
+                        >
+
+                        <img
+                            src="foto/foto-04.jpg"
+                            alt="Foto do segundo ano"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CARTA / MENSAGEM
+    ====================================== -->
+
+    <section class="carta-section">
+
+        <div class="carta">
+
+            <h2>
+                Para você ❤️
+            </h2>
+
+            <p>
+                Se eu pudesse voltar no tempo, escolheria viver
+                novamente cada momento que nos trouxe até aqui.
+
+                <br><br>
+
+                Obrigada por todos os momentos, pelos sorrisos,
+                pelos abraços, pelas conversas e por fazer parte
+                da minha vida.
+
+                <br><br>
+
+                Nossa história ainda está sendo escrita e eu espero
+                que possamos continuar preenchendo cada página
+                juntos.
+
+                <br><br>
+
+                Eu te amo. ❤️
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         FINAL
+    ====================================== -->
+
+    <section class="final">
+
+        <div class="final-conteudo">
+
+            <h2>
+                Que venham muitos outros momentos...
+            </h2>
+
+            <p>
+                Porque se esses anos já foram especiais,
+                eu mal posso esperar para descobrir tudo
+                o que ainda vamos viver juntos.
+            </p>
+
+            <div class="coracao-final">
+                ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         RODAPÉ
+    ====================================== -->
+
+    <footer>
+
+         site criado para ser cafona, te amo minha princesa
+
+    </footer>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script>
+
+        /* ==============================
+           CONTADOR DO RELACIONAMENTO
+        ============================== */
+
+        const dataInicio = new Date("2024-08-26T00:00:00");
+
+        function atualizarContador() {
+
+            const agora = new Date();
+
+            let diferenca = agora - dataInicio;
+
+            if (diferenca < 0) {
+                diferenca = 0;
+            }
+
+            const totalSegundos =
+                Math.floor(diferenca / 1000);
+
+            const minutosTotais =
+                Math.floor(totalSegundos / 60);
+
+            const horasTotais =
+                Math.floor(minutosTotais / 60);
+
+            const diasTotais =
+                Math.floor(horasTotais / 24);
+
+
+            /* Anos */
+
+            let anos =
+                agora.getFullYear() -
+                dataInicio.getFullYear();
+
+
+            let aniversarioEsteAno =
+                new Date(
+                    agora.getFullYear(),
+                    dataInicio.getMonth(),
+                    dataInicio.getDate()
+                );
+
+
+            if (agora < aniversarioEsteAno) {
+                anos--;
+            }
+
+
+            /* Meses */
+
+            let meses =
+                agora.getMonth() -
+                dataInicio.getMonth();
+
+            if (meses < 0) {
+                meses += 12;
+            }
+
+            if (
+                agora.getDate() <
+                dataInicio.getDate()
+            ) {
+                meses--;
+            }
+
+            if (meses < 0) {
+                meses = 11;
+            }
+
+
+            /* Dias */
+
+            const ultimoAniversario =
+                new Date(
+                    agora.getFullYear(),
+                    dataInicio.getMonth(),
+                    dataInicio.getDate()
+                );
+
+            if (agora < ultimoAniversario) {
+                ultimoAniversario.setFullYear(
+                    agora.getFullYear() - 1
+                );
+            }
+
+            const diferencaDias =
+                Math.floor(
+                    (
+                        agora -
+                        ultimoAniversario
+                    ) /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            /* Horas */
+
+            const horas =
+                agora.getHours();
+
+
+            /* Minutos */
+
+            const minutos =
+                agora.getMinutes();
+
+
+            document.getElementById("anos")
+                .textContent = anos;
+
+            document.getElementById("meses")
+                .textContent = meses;
+
+            document.getElementById("dias")
+                .textContent = diferencaDias;
+
+            document.getElementById("horas")
+                .textContent = horas;
+
+            document.getElementById("minutos")
+                .textContent = minutos;
+
+        }
+
+        atualizarContador();
+
+        setInterval(
+            atualizarContador,
+            60000
+        );
+
+
+        /* ==============================
+           CORAÇÕES FLUTUANDO
+        ============================== */
+
+        function criarCoracao() {
+
+            const heart =
+                document.createElement("div");
+
+            heart.classList.add("heart");
+
+            heart.innerHTML = "❤️";
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+            heart.style.fontSize =
+                (Math.random() * 15 + 12) + "px";
+
+            heart.style.animationDuration =
+                (Math.random() * 4 + 5) + "s";
+
+            document.body.appendChild(heart);
+
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 9000);
+
+        }
+
+
+        setInterval(
+            criarCoracao,
+            900
+        );
+
+
+    </script>
+
+</body>
+</html>
